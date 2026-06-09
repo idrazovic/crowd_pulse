@@ -1,8 +1,8 @@
-import { TrendingUp, ChevronDown, Globe } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { TopBar } from "@/components/layout/top-bar";
 import { LineupCard } from "@/components/feed/lineup-card";
-import { LINEUPS, VIBE_TAGS } from "@/lib/mock-data";
-import { Button } from "@/components/ui/button";
+import { FeedFilters } from "@/components/feed/feed-filters";
+import { LINEUPS } from "@/lib/mock-data";
 
 export default function FeedPage() {
   return (
@@ -27,26 +27,7 @@ export default function FeedPage() {
         </div>
 
         {/* Filter chips */}
-        <div className="flex items-center gap-2 mb-8">
-          <Button
-            variant="outline"
-            size="sm"
-            className="rounded-full border-border bg-card hover:bg-card/80 text-foreground gap-2 h-9 px-4"
-          >
-            <span>{VIBE_TAGS[0].emoji}</span>
-            Vibe
-            <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            className="rounded-full border-border bg-card hover:bg-card/80 text-foreground gap-2 h-9 px-4"
-          >
-            <Globe className="h-4 w-4 text-muted-foreground" />
-            Country
-            <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
-          </Button>
-        </div>
+        <FeedFilters />
 
         {/* Section header */}
         <div className="flex items-center justify-between mb-4">

@@ -58,6 +58,53 @@ export const USERS = [
   { id: "u4", name: "Bass Prophet", email: "bass@example.com", avatarUrl: "https://i.pravatar.cc/150?img=15", username: "bassprophet" },
 ];
 
+export const NOTIFICATIONS = [
+  {
+    id: "n1",
+    type: "vote",
+    message: "Tastemaker upvoted your lineup",
+    lineupTitle: "Perfect Warehouse Closer",
+    lineupId: "l1",
+    actorName: "Tastemaker",
+    actorAvatarUrl: "https://i.pravatar.cc/150?img=12",
+    read: false,
+    createdAt: "2026-06-09T14:30:00Z",
+  },
+  {
+    id: "n2",
+    type: "comment",
+    message: "Sunset Chaser commented on your lineup",
+    lineupTitle: "Golden Hour at Kalemegdan",
+    lineupId: "l2",
+    actorName: "Sunset Chaser",
+    actorAvatarUrl: "https://i.pravatar.cc/150?img=13",
+    read: false,
+    createdAt: "2026-06-09T12:15:00Z",
+  },
+  {
+    id: "n3",
+    type: "vote",
+    message: "Neon Drift upvoted your lineup",
+    lineupTitle: "Perfect Warehouse Closer",
+    lineupId: "l1",
+    actorName: "Neon Drift",
+    actorAvatarUrl: "https://i.pravatar.cc/150?img=14",
+    read: true,
+    createdAt: "2026-06-08T22:45:00Z",
+  },
+  {
+    id: "n4",
+    type: "comment",
+    message: "Bass Prophet commented on your lineup",
+    lineupTitle: "Dark Hours at Berghain",
+    lineupId: "l5",
+    actorName: "Bass Prophet",
+    actorAvatarUrl: "https://i.pravatar.cc/150?img=15",
+    read: true,
+    createdAt: "2026-06-08T18:00:00Z",
+  },
+];
+
 export const LINEUPS = [
   {
     id: "l1",

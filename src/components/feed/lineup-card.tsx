@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUp, MessageCircle, Share2, MapPin, BadgeCheck } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -44,7 +45,7 @@ export function LineupCard({ lineup, rank }: { lineup: Lineup; rank: number }) {
   const vibeColor = VIBE_COLORS[lineup.vibeTag] ?? "bg-zinc-500/15 text-zinc-400 border-zinc-500/30";
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 flex flex-col gap-3 hover:border-white/15 transition-colors duration-200">
+    <Link href={`/lineup/${lineup.id}`} className="rounded-xl border border-border bg-card p-4 flex flex-col gap-3 hover:border-white/15 transition-colors duration-200 block">
       {/* Venue + Vibe */}
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-1.5 text-sm min-w-0 text-muted-foreground">
@@ -105,6 +106,6 @@ export function LineupCard({ lineup, rank }: { lineup: Lineup; rank: number }) {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
