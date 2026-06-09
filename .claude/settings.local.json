@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:preview--lineup-pulse-creator.lovable.app)",
       "Bash(mkdir -p \"d:\\\\Code\\\\crowd_pulse\\\\.claude\\\\skills\\\\start-feature\")",
-      "Bash(mv \"d:\\\\Code\\\\crowd_pulse\\\\.claude\\\\skills\\\\start-feature\" \"d:\\\\Code\\\\crowd_pulse\\\\.claude\\\\skills\\\\implement-current-feature\")"
+      "Bash(mv \"d:\\\\Code\\\\crowd_pulse\\\\.claude\\\\skills\\\\start-feature\" \"d:\\\\Code\\\\crowd_pulse\\\\.claude\\\\skills\\\\implement-current-feature\")",
+      "Bash(git add *)"
     ],
     "additionalDirectories": [
       "d:\\Code\\crowd_pulse\\.claude\\skills",
