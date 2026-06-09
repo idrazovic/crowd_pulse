@@ -1,20 +1,25 @@
 # Current Feature
 
-<!-- Feature Name -->
+Feed UI Phase 1
 
 ## Status
 
-<!-- Not Started|In Progress|Completed -->
-
-Not Started
+In Progress
 
 ## Goals
 
-<!-- Goals & requirements -->
+- ShadCN UI initialization and components
+- ShadCN component installation
+- Feed route at /feed
+- Main feed layout and any global styles
+- Dark mode by default
+- Top bar with Logo and search icon, notification icon and profile avatar/icon
+- Main area with heading
 
 ## Notes
 
-<!-- Any extra notes -->
+Reference screenshots: `context/screenshots/trending-feed-web.png`, `context/screenshots/trending-feed-mobile.png`
+Mock data: `src/lib/mock-data.ts`
 
 ## History
 
