@@ -1,0 +1,161 @@
+export const VIBE_TAGS = [
+  { id: "sunset", label: "Sunset", emoji: "🌅" },
+  { id: "sunrise", label: "Sunrise", emoji: "🌄" },
+  { id: "midnight", label: "Midnight", emoji: "🌙" },
+  { id: "beach", label: "Beach", emoji: "🏖️" },
+  { id: "rooftop", label: "Rooftop", emoji: "🏙️" },
+  { id: "warehouse", label: "Warehouse", emoji: "🏭" },
+  { id: "underground", label: "Underground", emoji: "🕳️" },
+  { id: "open-air", label: "Open Air", emoji: "🌳" },
+  { id: "festival", label: "Festival", emoji: "🎪" },
+  { id: "intimate", label: "Intimate", emoji: "🕯️" },
+] as const;
+
+export const COUNTRIES = [
+  { id: "gb", label: "United Kingdom" },
+  { id: "rs", label: "Serbia" },
+  { id: "jp", label: "Japan" },
+  { id: "br", label: "Brazil" },
+  { id: "de", label: "Germany" },
+  { id: "nl", label: "Netherlands" },
+];
+
+export const VENUES = [
+  { id: "v1", googlePlaceId: "gp1", name: "Fabric", city: "London", country: "United Kingdom", lat: 51.5208, lng: -0.1017 },
+  { id: "v2", googlePlaceId: "gp2", name: "Kalemegdan Fortress", city: "Belgrade", country: "Serbia", lat: 44.8228, lng: 20.4483 },
+  { id: "v3", googlePlaceId: "gp3", name: "Sky Garden", city: "Tokyo", country: "Japan", lat: 35.6762, lng: 139.6503 },
+  { id: "v4", googlePlaceId: "gp4", name: "Ipanema Beach", city: "Rio de Janeiro", country: "Brazil", lat: -22.9838, lng: -43.2096 },
+  { id: "v5", googlePlaceId: "gp5", name: "Berghain", city: "Berlin", country: "Germany", lat: 52.5114, lng: 13.4419 },
+  { id: "v6", googlePlaceId: "gp6", name: "Shelter", city: "Amsterdam", country: "Netherlands", lat: 52.3800, lng: 4.8852 },
+];
+
+export const ARTISTS = [
+  { id: "a1", spotifyArtistId: "sp1", name: "Kilo Frequenz", imageUrl: "https://i.pravatar.cc/150?img=1", genres: ["techno", "industrial"] },
+  { id: "a2", spotifyArtistId: "sp2", name: "Marcus Veil", imageUrl: "https://i.pravatar.cc/150?img=2", genres: ["deep techno", "ambient"] },
+  { id: "a3", spotifyArtistId: "sp3", name: "Lumen Soi", imageUrl: "https://i.pravatar.cc/150?img=3", genres: ["minimal", "techno"] },
+  { id: "a4", spotifyArtistId: "sp4", name: "Nova Reign", imageUrl: "https://i.pravatar.cc/150?img=4", genres: ["techno", "rave"] },
+  { id: "a5", spotifyArtistId: "sp5", name: "Beard & Bass", imageUrl: "https://i.pravatar.cc/150?img=5", genres: ["house", "disco"] },
+  { id: "a6", spotifyArtistId: "sp6", name: "Yuki Tran", imageUrl: "https://i.pravatar.cc/150?img=6", genres: ["melodic house", "balearic"] },
+  { id: "a7", spotifyArtistId: "sp7", name: "Stella Dusk", imageUrl: "https://i.pravatar.cc/150?img=7", genres: ["deep house", "ambient"] },
+  { id: "a8", spotifyArtistId: "sp8", name: "Röhm", imageUrl: "https://i.pravatar.cc/150?img=8", genres: ["dark techno", "industrial"] },
+  { id: "a9", spotifyArtistId: "sp9", name: "Coral Wave", imageUrl: "https://i.pravatar.cc/150?img=9", genres: ["tropical house", "afrobeats"] },
+  { id: "a10", spotifyArtistId: "sp10", name: "Drift", imageUrl: "https://i.pravatar.cc/150?img=10", genres: ["ambient", "drone"] },
+];
+
+export const CURRENT_USER = {
+  id: "u0",
+  name: "Ivan Drazovic",
+  email: "idrazovic@gmail.com",
+  avatarUrl: "https://i.pravatar.cc/150?img=11",
+  username: "idrazovic",
+};
+
+export const USERS = [
+  CURRENT_USER,
+  { id: "u1", name: "Tastemaker", email: "tastemaker@example.com", avatarUrl: "https://i.pravatar.cc/150?img=12", username: "tastemaker" },
+  { id: "u2", name: "Sunset Chaser", email: "sunset@example.com", avatarUrl: "https://i.pravatar.cc/150?img=13", username: "sunsetchaser" },
+  { id: "u3", name: "Neon Drift", email: "neon@example.com", avatarUrl: "https://i.pravatar.cc/150?img=14", username: "neondrift" },
+  { id: "u4", name: "Bass Prophet", email: "bass@example.com", avatarUrl: "https://i.pravatar.cc/150?img=15", username: "bassprophet" },
+];
+
+export const LINEUPS = [
+  {
+    id: "l1",
+    title: "Perfect Warehouse Closer",
+    venue: VENUES[0],
+    vibeTag: "midnight",
+    voteCount: 1400,
+    commentCount: 182,
+    createdAt: "2026-06-01T22:00:00Z",
+    creator: USERS[1],
+    hasVoted: false,
+    djs: [
+      { ...ARTISTS[0], position: 1 },
+      { ...ARTISTS[1], position: 2 },
+      { ...ARTISTS[2], position: 3 },
+      { ...ARTISTS[3], position: 4 },
+    ],
+  },
+  {
+    id: "l2",
+    title: "Golden Hour at Kalemegdan",
+    venue: VENUES[1],
+    vibeTag: "sunset",
+    voteCount: 982,
+    commentCount: 94,
+    createdAt: "2026-06-02T18:00:00Z",
+    creator: USERS[2],
+    hasVoted: true,
+    djs: [
+      { ...ARTISTS[4], position: 1 },
+      { ...ARTISTS[3], position: 2 },
+      { ...ARTISTS[5], position: 3 },
+    ],
+  },
+  {
+    id: "l3",
+    title: "Rooftop Dreams Over Tokyo",
+    venue: VENUES[2],
+    vibeTag: "rooftop",
+    voteCount: 741,
+    commentCount: 63,
+    createdAt: "2026-06-03T20:00:00Z",
+    creator: USERS[3],
+    hasVoted: false,
+    djs: [
+      { ...ARTISTS[5], position: 1 },
+      { ...ARTISTS[6], position: 2 },
+      { ...ARTISTS[1], position: 3 },
+      { ...ARTISTS[2], position: 4 },
+    ],
+  },
+  {
+    id: "l4",
+    title: "Sunrise Set on Ipanema",
+    venue: VENUES[3],
+    vibeTag: "sunrise",
+    voteCount: 610,
+    commentCount: 47,
+    createdAt: "2026-06-04T05:00:00Z",
+    creator: USERS[4],
+    hasVoted: false,
+    djs: [
+      { ...ARTISTS[8], position: 1 },
+      { ...ARTISTS[6], position: 2 },
+      { ...ARTISTS[9], position: 3 },
+    ],
+  },
+  {
+    id: "l5",
+    title: "Dark Hours at Berghain",
+    venue: VENUES[4],
+    vibeTag: "underground",
+    voteCount: 523,
+    commentCount: 38,
+    createdAt: "2026-06-05T00:00:00Z",
+    creator: USERS[1],
+    hasVoted: true,
+    djs: [
+      { ...ARTISTS[7], position: 1 },
+      { ...ARTISTS[0], position: 2 },
+      { ...ARTISTS[3], position: 3 },
+    ],
+  },
+  {
+    id: "l6",
+    title: "Open Air by the Canal",
+    venue: VENUES[5],
+    vibeTag: "open-air",
+    voteCount: 388,
+    commentCount: 21,
+    createdAt: "2026-06-06T14:00:00Z",
+    creator: USERS[2],
+    hasVoted: false,
+    djs: [
+      { ...ARTISTS[6], position: 1 },
+      { ...ARTISTS[4], position: 2 },
+      { ...ARTISTS[9], position: 3 },
+      { ...ARTISTS[5], position: 4 },
+    ],
+  },
+];
