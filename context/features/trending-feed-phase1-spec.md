@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is phase 1 of 3 for the trending feed UI layout. Use the screenshot referenced below for how it should look.
+This is phase 1 of the trending feed UI layout. Use the screenshot referenced below for how it should look.
 
 ## Requirements for phase 1
 
