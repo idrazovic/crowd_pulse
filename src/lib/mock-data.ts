@@ -17,7 +17,10 @@ export const COUNTRIES = [
   { id: "jp", label: "Japan" },
   { id: "br", label: "Brazil" },
   { id: "de", label: "Germany" },
-  { id: "nl", label: "Netherlands" },
+  { id: "hr", label: "Croatia" },
+  { id: "pt", label: "Portugal" },
+  { id: "us", label: "United States" },
+  { id: "es", label: "Spain" },
 ];
 
 export const VENUES = [
