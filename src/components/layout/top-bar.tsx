@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Bell, Search, Flame, X, User, LogOut, MessageCircle, ArrowUp } from "lucide-react";
+import { Bell, Flame, User, LogOut, MessageCircle, ArrowUp } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -23,7 +22,6 @@ function formatRelativeTime(dateStr: string): string {
 }
 
 export function TopBar() {
-  const [searchOpen, setSearchOpen] = useState(false);
   const router = useRouter();
   const unreadCount = NOTIFICATIONS.filter((n) => !n.read).length;
 
@@ -43,35 +41,8 @@ export function TopBar() {
           </div>
         </Link>
 
-        {/* Inline search (expands over center) */}
-        {searchOpen && (
-          <div className="absolute left-0 right-0 top-0 z-10 flex items-center gap-2 px-4 py-3 md:px-8 bg-background/95 backdrop-blur-md border-b border-border">
-            <Search className="h-4 w-4 text-muted-foreground shrink-0" />
-            <input
-              autoFocus
-              type="text"
-              placeholder="Search lineups, DJs, venues…"
-              className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
-            />
-            <button
-              onClick={() => setSearchOpen(false)}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-        )}
-
         {/* Right icons */}
         <div className="flex items-center gap-0.5 md:gap-1">
-          {/* Search toggle */}
-          <button
-            className="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-            onClick={() => setSearchOpen((v) => !v)}
-          >
-            <Search className="h-[18px] w-[18px]" />
-          </button>
-
           {/* Notifications */}
           <DropdownMenu>
             <DropdownMenuTrigger className="relative flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors cursor-pointer">
